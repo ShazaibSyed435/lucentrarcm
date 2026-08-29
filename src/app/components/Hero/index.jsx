@@ -66,26 +66,6 @@ function HeroSection() {
 
             {/* Content */}
             <div className="relative z-10 flex h-full flex-col">
-              {/* Badge */}
-              {/* <div className="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-[#ff7845] px-4 py-2 text-xs font-medium text-[#ff7845] sm:mb-7 sm:px-5 sm:text-sm">
-                <span>▣</span>
-                <span>Trusted Healthcare IT Solutions</span>
-              </div> */}
-
-              {/* Heading */}
-              {/* <h1 className="max-w-2xl text-3xl font-bold leading-[1.08] tracking-tight sm:text-4xl md:text-4xl lg:text-[48px] xl:text-[56px]">
-                Tailored Medical <span className="text-[#ff7845]">Billing</span>{" "}
-                for U.S. <br className="hidden xl:block" />
-                Healthcare Providers
-              </h1> */}
-
-              {/* Description */}
-              {/* <p className="mt-6 max-w-2xl text-sm leading-6 text-[#b4d0cf] sm:mt-7 sm:text-base sm:leading-7 lg:text-lg">
-                Lucentra RCM — Your Revenue, Our Priority. We reduce denials,
-                accelerate reimbursements, and maximize your practice&apos;s
-                cash flow.
-              </p> */}
-
               <SectionHeading
                 badge="Trusted Healthcare IT Solutions"
                 title={
