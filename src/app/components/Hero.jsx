@@ -171,12 +171,28 @@
 
 import React from "react";
 import Image from "next/image";
+import { ArrowRight, ChevronRight } from "lucide-react";
 
 function HeroSection() {
   const features = [
     "End-to-end Revenue Cycle Management",
     "Credentialing & Payer Contracting",
     "Real-time Eligibility Verification",
+  ];
+
+  const stats = [
+    {
+      value: "97%",
+      label: "Happy Clients",
+    },
+    {
+      value: "4,500+",
+      label: "Claims Processed",
+    },
+    {
+      value: "25%",
+      label: "Revenue Increase",
+    },
   ];
 
   return (
@@ -203,16 +219,16 @@ function HeroSection() {
           </div>
 
           {/* Providers Card */}
-          <div className="absolute left-4 top-12 z-10 flex items-center gap-2 rounded-xl bg-white px-3 py-2.5 shadow-lg sm:left-6 sm:top-16 md:left-5 md:top-16 lg:left-7 lg:top-24 lg:gap-3 lg:rounded-2xl lg:px-4 lg:py-3">
+          <div className="absolute left-4 top-12 z-10 flex items-center gap-2 rounded-xl bg-white px-3 py-2  shadow-lg   sm:left-6 sm:top-16 md:left-5 md:top-16 lg:left-7 lg:top-24 lg:gap-3 lg:rounded-2xl md:px-4 md:py-3">
             <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#075754] text-sm text-white lg:h-9 lg:w-9">
               ✚
             </div>
 
             <div>
-              <p className="text-lg font-bold leading-5 text-gray-900 lg:text-xl">
+              <p className="text-[16px] md:text-[20px] font-bold leading-5 text-gray-900 ">
                 500+
               </p>
-              <p className="mt-1 text-[10px] text-gray-500 lg:text-xs">
+              <p className="mt-[2px] text-[10px] md:text-[11px] text-gray-500">
                 Providers Nationwide
               </p>
             </div>
@@ -233,15 +249,16 @@ function HeroSection() {
         </div>
 
         {/* BOX 1 - CONTENT */}
-        <div className="order-2 w-full bg-[#075754] md:order-1 md:h-full md:w-1/2 lg:rounded-l-3xl">
-          <div className="relative h-full overflow-hidden px-6 py-10 text-white sm:px-10 sm:py-12 md:px-8 md:py-10 lg:px-12 lg:py-14 xl:px-16">
+        {/* <div className="order-2 w-full bg-[#075754] md:order-1 md:h-full md:w-1/2 lg:rounded-l-3xl"> */}
+        <div className="order-2 w-full bg-[linear-gradient(to_bottom_right,#012120,#02504D,#033E3C)] md:order-1 md:h-full md:w-1/2 lg:rounded-l-3xl">
+          <div className="relative h-full overflow-hidden px-10 py-6 text-white  md:px-8 md:py-8 lg:px-10 lg:py-12">
             {/* Background circles */}
             <div className="pointer-events-none absolute -right-28 -top-28 h-72 w-72 rounded-full border-[60px] border-[#155f5b] opacity-60 sm:-right-32 sm:-top-32 sm:h-80 sm:w-80 md:h-80 md:w-80 lg:h-96 lg:w-96" />
 
             <div className="pointer-events-none absolute -bottom-32 -left-28 h-80 w-80 rounded-full border-[60px] border-[#155f5b] opacity-60 sm:-bottom-36 sm:-left-32 sm:h-96 sm:w-96 md:h-80 md:w-80 lg:h-96 lg:w-96" />
 
             {/* Content */}
-            <div className="relative z-10 flex h-full flex-col">
+            <div className="relative z-10 flex h-full gap-3 lg:gap-4 justify-center flex-col">
               {/* Badge */}
               <div className=" inline-flex w-fit items-center gap-2 rounded-full border border-[#ff7845] px-4 py-2 text-[11px] md:text-[13px] font-medium text-[#ff7845]  sm:px-5 sm:text-sm">
                 <span>▣</span>
@@ -256,7 +273,7 @@ function HeroSection() {
               </h1>
 
               {/* Description */}
-              <p className=" max-w-2xl text-[13px] leading-6 text-[#b4d0cf]  md:text-[14px]  lg:text-[15px] xl:text-[17px] ">
+              <p className=" max-w-2xl text-[13px]    text-[#b4d0cf]  md:text-[12px]  lg:text-[15px] xl:text-[17px] ">
                 Lucentra RCM — Your Revenue, Our Priority. We reduce denials,
                 accelerate reimbursements, and maximize your practice&apos;s
                 cash flow.
@@ -279,44 +296,35 @@ function HeroSection() {
               </div>
 
               {/* Buttons */}
-              <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:items-center">
-                <button className="flex w-full items-center justify-center gap-3 rounded-full bg-[#ff7845] px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-[#f56d3a] sm:w-auto sm:px-7 sm:py-4">
-                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-[#ff7845]">
-                    →
+              <div className="flex flex-wrap gap-3 ">
+                <button className="flex h-10 shrink-0 items-center justify-center gap-3 rounded-full bg-[#ff7845] px-5 text-[14px] font-semibold whitespace-nowrap text-white transition hover:bg-[#f56d3a]">
+                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white text-[#ff7845]">
+                    <ChevronRight size={15} strokeWidth={2.5} />
                   </span>
                   Explore Services
                 </button>
 
-                <button className="w-full rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-[#075754] transition hover:bg-gray-100 sm:w-auto sm:px-7 sm:py-4">
+                <button className="h-10 shrink-0 rounded-full bg-white px-5 text-[14px] font-semibold whitespace-nowrap text-[#075754] transition hover:bg-gray-100">
                   Free Consultation
                 </button>
               </div>
 
               {/* Divider */}
-              <div className="mt-7 border-t border-white/20 sm:mt-6" />
+              <div className=" border-t border-white/20" />
 
               {/* Statistics */}
-              <div className="mt-5 grid grid-cols-3 gap-3 sm:gap-6 lg:gap-8">
-                <div>
-                  <p className="text-2xl font-bold sm:text-3xl">97%</p>
-                  <p className="mt-1 text-[10px] text-[#82aaa8] sm:text-xs">
-                    Happy Clients
-                  </p>
-                </div>
+              <div className=" flex flex-wrap gap-x-8 gap-y-4">
+                {stats.map((stat) => (
+                  <div key={stat.label} className="shrink-0 whitespace-nowrap">
+                    <p className="text-[20px] font-bold md:text-[22px] xl:text-[32px]">
+                      {stat.value}
+                    </p>
 
-                <div>
-                  <p className="text-2xl font-bold sm:text-3xl">4,500+</p>
-                  <p className="mt-1 text-[10px] text-[#82aaa8] sm:text-xs">
-                    Claims Processed
-                  </p>
-                </div>
-
-                <div>
-                  <p className="text-2xl font-bold sm:text-3xl">25%</p>
-                  <p className="mt-1 text-[10px] text-[#82aaa8] sm:text-xs">
-                    Revenue Increase
-                  </p>
-                </div>
+                    <p className="mt-1 text-[11px] text-[#82aaa8] md:text-[12px]">
+                      {stat.label}
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

@@ -26,7 +26,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 h-[96px] w-full bg-white">
+    <header className=" h-[96px] w-full bg-white">
       <nav className="mx-auto flex h-full w-full max-w-[1440px] items-center justify-between  px-[16px] 2xl:px-0">
         {/* Logo */}
         <Link href="/" aria-label="Lucentra RCM home">
