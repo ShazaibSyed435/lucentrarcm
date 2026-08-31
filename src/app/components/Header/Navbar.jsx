@@ -36,12 +36,12 @@ export default function Navbar() {
             width={220}
             height={42}
             priority
-            className="h-auto w-[180px] sm:w-[200px]"
+            className="h-[42] w-[220px]"
           />
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden items-center gap-1 lg:flex">
+        <div className="hidden items-center gap-0 lg:flex">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -72,12 +72,12 @@ export default function Navbar() {
             </div>
           </a>
 
-          <Link
-            href="/signup"
-            className="rounded-lg bg-black px-5 py-3 text-sm font-medium text-white transition hover:bg-gray-800"
+          <button
+            href="/contact"
+            className=" bg-[#005350] rounded-full px-5 py-3 text-sm font-medium text-white transition "
           >
-            Get Started
-          </Link>
+            Contact Us
+          </button>
         </div>
 
         {/* Mobile Menu Button */}
