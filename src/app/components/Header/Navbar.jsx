@@ -55,18 +55,18 @@ export default function Navbar() {
 
         {/* Desktop Right Side */}
         <div className="hidden items-center gap-5 xl:flex">
-          <a href="tel:8889870332" className="flex items-center gap-3">
+          <a href="tel:8889870332" className="flex items-center gap-2">
             <Image
               src="/call.png"
               alt="Call"
-              width={36}
-              height={36}
-              className="h-9 w-9 object-contain"
+              width={50}
+              height={50}
+              className="h-[50px] w-[50px] object-contain"
             />
 
             <div className="leading-tight">
-              <p className="text-sm text-gray-500">Call Anytime</p>
-              <p className="text-base font-semibold text-gray-900">
+              <p className="text-[14px] text-gray-500">Call Anytime</p>
+              <p className="text-[24px] leading-[1.6] font-semibold text-gray-900">
                 (888) 987-0332
               </p>
             </div>
@@ -74,7 +74,7 @@ export default function Navbar() {
 
           <button
             href="/contact"
-            className=" bg-[#005350] rounded-full px-5 py-3 text-sm font-medium text-white transition "
+            className=" bg-[#005350] rounded-full px-5 py-3 text-4 font-medium text-white transition "
           >
             Contact Us
           </button>

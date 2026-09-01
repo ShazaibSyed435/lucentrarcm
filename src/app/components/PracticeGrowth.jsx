@@ -45,27 +45,26 @@ export default function PracticeGrowth() {
           {/* Heading */}
           <div className="w-full lg:max-w-[650px]">
             {/* Badge */}
-            <div className="mb-4 inline-flex items-center gap-2">
-              <BriefcaseBusiness className="h-[13px] w-[13px] text-[#ff6845]" />
+            <div className="mb-3 inline-flex items-center gap-2">
+              <BriefcaseBusiness className="h-[13px] w-[13px]  text-[#ff6845]" />
 
-              <span className="text-[11px] font-semibold uppercase tracking-[1px] text-[#ff6845]">
+              <span className="text-[13px] font-bold uppercase tracking-[1px] text-[#ff6845]">
                 Powering Practice Growth
               </span>
             </div>
 
             {/* Heading */}
-            <h2 className="text-[30px] font-semibold leading-[1.15] tracking-[-1px] text-[#102b2a] sm:text-[36px] md:text-[40px] lg:text-[42px] xl:text-[44px]">
-              Experience <span className="text-[#075f5b]">Excellence</span>
-              <br className="hidden sm:block" />
-              with a Top-Ranked
-              <br className="hidden sm:block" />
+            <h2 className="text-[26px] font-bold leading-[1.25] mxa-w-[580px] tracking-[-1px] text-black sm:text-[32px] md:text-[38px] lg:text-[44px] xl:text-[44px]">
+              Experience <span className="text-[#075f5b]">Excellence </span>
+              <br className="hidden md:block" /> with a Top-Ranked{" "}
+              <br className="hidden md:block" />
               Medical Billing Company
             </h2>
           </div>
 
           {/* Description */}
           <div className="w-full lg:max-w-[360px] lg:pb-1">
-            <p className="text-[13px] leading-[1.8] text-[#7b8585] sm:text-[14px]">
+            <p className="text-[14px] leading-[1.8] text-[#7b8585] sm:text-[16px]">
               Your success is our priority — expert, transparent, and customized
               billing services that keep your practice running smoothly.
             </p>
@@ -73,7 +72,7 @@ export default function PracticeGrowth() {
         </div>
 
         {/* ================= CARDS ================= */}
-        <div className="mt-12 flex flex-wrap gap-5">
+        <div className="mt-12 md:mt-14 flex flex-wrap gap-5">
           {cards.map((card) => {
             const Icon = card.icon;
 
@@ -85,7 +84,7 @@ export default function PracticeGrowth() {
                 }`}
               >
                 <div
-                  className={`relative flex h-full min-h-[330px] flex-col rounded-[15px] bg-white p-7 shadow-[0_8px_30px_rgba(7,95,91,0.06)] sm:p-8 overflow-hidden border border-transparent  hover:-translate-y-2 transition-transform ${
+                  className={`relative flex h-full min-h-[330px] flex-col rounded-[15px] bg-white p-6 shadow-[0_8px_30px_rgba(7,95,91,0.06)] sm:p-8 overflow-hidden border border-transparent  hover:-translate-y-2 transition-transform ${
                     card.highlighted
                       ? " hover:border-[#ff6845]"
                       : "  hover:border-[#022524]"
@@ -112,7 +111,7 @@ export default function PracticeGrowth() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="mt-5 text-[17px] font-semibold leading-[1.3] text-[#172b2b] sm:text-[18px]">
+                  <h3 className="mt-5 text-[17px] font-bold leading-[1.3] text-[#172b2b] sm:text-[19px]">
                     {card.title}
                   </h3>
 
@@ -128,27 +127,27 @@ export default function PracticeGrowth() {
                   <div className="mt-auto flex items-end justify-between pt-8">
                     <div>
                       <p
-                        className={`text-[42px] font-bold leading-none tracking-[-1px] ${
+                        className={`text-[44px] md:text-[54px] font-bold leading-none tracking-[-1px] ${
                           card.highlighted ? "text-[#ed7548]" : "text-[#075f5b]"
                         }`}
                       >
                         {card.value}
                       </p>
 
-                      <p className="mt-2 text-[10px] text-[#a0b0b0] sm:text-[11px]">
+                      <p className="mt-2 text-[12px] text-[#a0b0b0] ">
                         {card.label}
                       </p>
                     </div>
 
                     {/* Bottom Right Icon */}
                     <div
-                      className={`flex h-[46px] w-[46px] shrink-0 items-center justify-center rounded-full ${
+                      className={`flex h-[48px] w-[48px] shrink-0 items-center justify-center rounded-full ${
                         card.highlighted
                           ? "bg-[#ed7548] text-white"
                           : "bg-[#075f5b] text-white"
                       }`}
                     >
-                      <Icon className="h-[19px] w-[19px]" />
+                      <Icon className="h-[22px] w-[22px]" />
                     </div>
                   </div>
                 </div>

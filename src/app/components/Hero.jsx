@@ -78,7 +78,7 @@ function HeroSection() {
         </div>
 
         {/* BOX 1 - CONTENT */}
-        {/* <div className="order-2 w-full bg-[#075754] md:order-1 md:h-full md:w-1/2 lg:rounded-l-3xl"> */}
+
         <div className="order-2 w-full bg-[linear-gradient(to_bottom_right,#012120,#02504D,#033E3C)] md:order-1 md:h-full md:w-1/2 ">
           <div className="relative h-full overflow-hidden text-white  ">
             {/* Background circles */}
@@ -87,7 +87,7 @@ function HeroSection() {
             <div className="pointer-events-none absolute -bottom-32 -left-28 h-80 w-80 rounded-full border-[60px] border-[#155f5b] opacity-60 sm:-bottom-36 sm:-left-32 sm:h-96 sm:w-96 md:h-80 md:w-80 lg:h-96 lg:w-96" />
 
             {/* Content */}
-            <div className="relative max-w-[640px] md:ml-auto z-10 flex h-full gap-3 lg:gap-5 xl:gap-6 justify-center flex-col px-10 py-6 md:px-8 md:py-8 lg:px-10 lg:py-12">
+            <div className="relative max-w-[640px] md:ml-auto z-10 flex h-full gap-4 lg:gap-5 xl:gap-6 justify-center flex-col px-6 py-10 md:px-8 md:py-8 lg:px-10 lg:py-12">
               {/* Badge */}
               <div className=" inline-flex w-fit items-center gap-2 rounded-full border border-[#ff7845] px-4 py-2 text-[11px] md:text-[13px] font-medium text-[#ff7845]  sm:px-5 sm:text-sm">
                 <span>▣</span>
@@ -95,14 +95,14 @@ function HeroSection() {
               </div>
 
               {/* Heading */}
-              <h1 className="max-w-2xl text-[26px] font-bold leading-[1.08] tracking-tight sm:text-[30px] md:text-[28px] lg:text-[36px] xl:text-[52px]">
+              <h1 className="max-w-2xl text-[26px] font-bold leading-[1.18]  sm:text-[30px] md:text-[28px] lg:text-[36px] xl:text-[52px]">
                 Tailored Medical <span className="text-[#ff7845]">Billing</span>{" "}
                 for U.S. <br className="hidden xl:block" />
                 Healthcare Providers
               </h1>
 
               {/* Description */}
-              <p className=" max-w-2xl text-[13px]    text-[#b4d0cf]  md:text-[12px]  lg:text-[15px] xl:text-[17px] ">
+              <p className=" max-w-2xl text-[13px]    text-[#b4d0cf]  md:text-[13px]  lg:text-[15px] xl:text-[17px] ">
                 Lucentra RCM — Your Revenue, Our Priority. We reduce denials,
                 accelerate reimbursements, and maximize your practice&apos;s
                 cash flow.
@@ -113,7 +113,7 @@ function HeroSection() {
                 {features.map((feature, index) => (
                   <div
                     key={index}
-                    className="flex items-start gap-3 text-[13px] text-[#d1e1e0] md:text-[15px]"
+                    className="flex items-start gap-3 text-[13px] text-[#d1e1e0] md:text-[14px]  lg:text-[15px] "
                   >
                     <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#ff7845] text-[10px] font-bold text-white">
                       ✓

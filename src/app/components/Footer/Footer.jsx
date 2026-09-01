@@ -40,7 +40,7 @@ const socials = [
 ];
 export default function Footer() {
   return (
-    <footer className="relative w-full overflow-hidden bg-[#064f4b] text-white">
+    <footer className="relative w-full overflow-hidden  bg-[linear-gradient(to_bottom_right,#012120,#02504D,#033E3C)] text-white">
       {/* Decorative Circle - Top Right */}
       <div className="pointer-events-none absolute -right-[80px] -top-[120px] h-[310px] w-[310px] rounded-full border-[45px] border-[#397773]/25 sm:-right-[100px] sm:-top-[150px] sm:h-[390px] sm:w-[390px] md:-right-[120px] md:-top-[170px] md:h-[430px] md:w-[430px]" />
 
