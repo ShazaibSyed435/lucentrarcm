@@ -46,7 +46,7 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className="text-[16px] font-bold text-[#7D8185] transition-colors hover:text-black border-2 border-transparent hover:border-2 hover:border-black rounded  px-3 py-1"
+              className="text-[16px] font-bold text-[#7D8185] transition-colors hover:text-black border-2 border-transparent hover:border-2 active:border-black rounded  px-3 py-1"
             >
               {link.name}
             </Link>
@@ -135,7 +135,7 @@ export default function Navbar() {
                     href={link.href}
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    <span className="text-[16px] font-semibold leading-[1.4] text-[#7b7f83] transition-colors hover:text-black border-2 border-transparent hover:border-2 hover:border-black rounded  px-3 py-1">
+                    <span className="text-[16px] font-semibold leading-[1.4] text-[#7b7f83] transition-colors hover:text-black border-2 border-transparent hover:border-2 active:border-black rounded  px-3 py-1">
                       {link.name}
                     </span>
                   </Link>

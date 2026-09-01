@@ -1,15 +1,11 @@
 import React from "react";
-
+import WhoWeAreSection from "@components/WhoWeAreSection";
+import AboutUs from "@components/AboutUs";
 export default function AboutPage() {
   return (
-    <div>
-      <h1>AboutPage</h1>
-      <h1>AboutPage</h1>
-      <h1>AboutPage</h1>
-      <h1>AboutPage</h1>
-      <h1>AboutPage</h1>
-      <h1>AboutPage</h1>
-      <h1>AboutPage</h1>
-    </div>
+    <main>
+      <AboutUs />
+      <WhoWeAreSection />
+    </main>
   );
 }

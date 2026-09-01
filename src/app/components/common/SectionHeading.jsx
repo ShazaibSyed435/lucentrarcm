@@ -1,25 +1,76 @@
-import React from "react";
+"use client";
 
-function SectionHeading({ badge, title, description, className = "" }) {
+import { BriefcaseBusiness } from "lucide-react";
+
+export default function SectionHeading({
+  badge,
+  badgeIcon: BadgeIcon = BriefcaseBusiness,
+  badgeColor = "#EA7F4A",
+  badgeBg,
+  badgeBorder,
+  badgeClassName = "",
+  heading,
+  description,
+  align = "left",
+  layout = "stacked",
+  headingClassName = "",
+  descriptionClassName = "",
+  containerClassName = "",
+}) {
+  const isSplit = layout === "split";
+
   return (
-    <div className={`relative z-10 ${className}`}>
-      {/* Badge */}
-      <div className="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-[#ff7845] px-4 py-2 text-xs font-medium text-[#ff7845] sm:mb-7 sm:px-5 sm:text-sm">
-        <span>▣</span>
-        <span>{badge}</span>
+    <div
+      className={`${
+        isSplit
+          ? "flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between lg:gap-12"
+          : "flex flex-col"
+      } ${containerClassName}`}
+    >
+      <div
+        className={`w-full ${
+          isSplit ? "lg:max-w-[700px]" : "max-w-[700px]"
+        } ${align === "center" ? "mx-auto text-center" : ""}`}
+      >
+        {/* Badge */}
+        {badge && (
+          <div
+            className={`mb-3 inline-flex items-center gap-2 ${
+              badgeBg || badgeBorder ? "rounded-full px-4 py-2" : ""
+            } ${badgeClassName}`}
+            style={{
+              color: badgeColor,
+              backgroundColor: badgeBg,
+              borderColor: badgeBorder,
+              borderWidth: badgeBorder ? "1px" : undefined,
+            }}
+          >
+            {BadgeIcon && <BadgeIcon className="h-[14px] w-[14px]" />}
+
+            <span>{badge}</span>
+          </div>
+        )}
+
+        {/* Heading */}
+        {heading && (
+          <h2
+            className={`text-[26px] font-bold leading-[1.25] tracking-[-1px] text-[#171717] sm:text-[30px] md:text-[34px] lg:text-[38px] xl:text-[42px] ${headingClassName}`}
+          >
+            {heading}
+          </h2>
+        )}
       </div>
 
-      {/* Heading */}
-      <h1 className="max-w-2xl text-3xl font-bold leading-[1.08] tracking-tight sm:text-4xl md:text-4xl lg:text-[48px] xl:text-[56px]">
-        {title}
-      </h1>
-
       {/* Description */}
-      <p className="mt-6 max-w-2xl text-sm leading-6 text-[#b4d0cf] sm:mt-7 sm:text-base sm:leading-7 lg:text-lg">
-        {description}
-      </p>
+      {description && (
+        <p
+          className={`w-full text-[14px] font-normal leading-[1.7] text-[#7a7a7a] md:text-[16px] ${
+            isSplit ? "lg:max-w-[430px] lg:pb-1" : "mt-5 max-w-[700px]"
+          } ${descriptionClassName}`}
+        >
+          {description}
+        </p>
+      )}
     </div>
   );
 }
-
-export default SectionHeading;

@@ -1,6 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import { ArrowRight, ChevronRight } from "lucide-react";
+import { Icon } from "@iconify/react";
+
+import { ChevronRight } from "lucide-react";
+import Badge from "./common/Badge";
 
 function HeroSection() {
   const features = [
@@ -50,7 +53,10 @@ function HeroSection() {
           {/* Providers Card */}
           <div className="absolute left-3 top-3 z-10 flex items-center gap-2 rounded-xl bg-white px-3 py-2  shadow-lg    md:left-7 md:top-28 lg:left-7  md:px-4 md:py-3">
             <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#075754] text-sm text-white lg:h-9 lg:w-9">
-              ✚
+              <Icon
+                icon="ic:baseline-health-and-safety"
+                className="h-4 w-4 lg:h-5 lg:w-5"
+              />
             </div>
 
             <div>
@@ -65,7 +71,7 @@ function HeroSection() {
 
           {/* Rating Card */}
           <div className="absolute bottom-3 right-3 z-10 rounded-xl bg-white px-3 py-2.5 shadow-lg md:bottom-16 md:right-7 lg:bottom-13  lg:rounded-2xl lg:px-4 lg:py-3">
-            <div className="text-xs tracking-wide text-[#f47a45] lg:text-sm">
+            <div className="text-xs tracking-wide text-[#EA7F4A] lg:text-sm">
               ★★★★★
             </div>
             <p className="text-xs font-bold text-gray-900 lg:text-sm">
@@ -89,14 +95,13 @@ function HeroSection() {
             {/* Content */}
             <div className="relative max-w-[640px] md:ml-auto z-10 flex h-full gap-4 lg:gap-5 xl:gap-6 justify-center flex-col px-6 py-10 md:px-8 md:py-8 lg:px-10 lg:py-12">
               {/* Badge */}
-              <div className=" inline-flex w-fit items-center gap-2 rounded-full border border-[#ff7845] px-4 py-2 text-[11px] md:text-[13px] font-medium text-[#ff7845]  sm:px-5 sm:text-sm">
-                <span>▣</span>
-                <span>Trusted Healthcare IT Solutions</span>
-              </div>
+              <Badge>
+                Trusted Healthcare IT Solutions
+              </Badge>
 
               {/* Heading */}
               <h1 className="max-w-2xl text-[26px] font-bold leading-[1.18]  sm:text-[30px] md:text-[28px] lg:text-[36px] xl:text-[52px]">
-                Tailored Medical <span className="text-[#ff7845]">Billing</span>{" "}
+                Tailored Medical <span className="text-[#EA7F4A]">Billing</span>{" "}
                 for U.S. <br className="hidden xl:block" />
                 Healthcare Providers
               </h1>
@@ -115,7 +120,7 @@ function HeroSection() {
                     key={index}
                     className="flex items-start gap-3 text-[13px] text-[#d1e1e0] md:text-[14px]  lg:text-[15px] "
                   >
-                    <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#ff7845] text-[10px] font-bold text-white">
+                    <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#EA7F4A] text-[10px] font-bold text-white">
                       ✓
                     </span>
 
@@ -126,8 +131,8 @@ function HeroSection() {
 
               {/* Buttons */}
               <div className="flex flex-wrap gap-3 ">
-                <button className="flex h-10 shrink-0 items-center justify-center gap-3 rounded-full bg-[#ff7845] px-5 text-[14px] font-semibold whitespace-nowrap text-white transition hover:bg-[#f56d3a]">
-                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white text-[#ff7845]">
+                <button className="flex h-10 shrink-0 items-center justify-center gap-3 rounded-full bg-[#EA7F4A] px-5 text-[14px] font-semibold whitespace-nowrap text-white transition hover:bg-[#f56d3a]">
+                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white text-[#EA7F4A]">
                     <ChevronRight size={15} strokeWidth={2.5} />
                   </span>
                   Explore Services

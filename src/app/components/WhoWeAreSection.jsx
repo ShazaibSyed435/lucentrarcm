@@ -58,7 +58,7 @@ function WhoWeAreSection() {
 
               {/* Experience Badge */}
               <div className="absolute right-3 sm:right-[10px] lg:right-[-10px] top-3 sm:top-7 flex items-center gap-3 rounded-[16px] bg-white px-4 py-3 shadow-[0_10px_35px_rgba(0,0,0,0.12)] ">
-                <div className="flex h-9 w-9 items-center justify-center rounded-[10px] bg-gradient-to-br from-[#075f5b] to-[#ff6845]">
+                <div className="flex h-9 w-9 items-center justify-center rounded-[10px] bg-gradient-to-br from-[#075f5b] to-[#EA7F4A]">
                   <ShieldCheck className="h-5 w-5 text-white" />
                 </div>
 
@@ -98,9 +98,9 @@ function WhoWeAreSection() {
             <div className="flex flex-col">
               {/* Badge */}
               <div className="mb-3 inline-flex items-center gap-2">
-                <BriefcaseBusiness className="h-[14px] w-[14px] text-[#ff6845]" />
+                <BriefcaseBusiness className="h-[14px] w-[14px] text-[#EA7F4A]" />
 
-                <span className="text-[13px] font-semibold uppercase tracking-[1px] text-[#ff6845]">
+                <span className="text-[13px] font-bold uppercase tracking-[1px] text-[#EA7F4A]">
                   Who We Are
                 </span>
               </div>

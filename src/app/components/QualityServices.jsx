@@ -91,16 +91,16 @@ export default function QualityServices() {
         <div className="mx-auto flex max-w-[700px] flex-col items-center text-center">
           {/* Badge */}
           <div className="mb-3 inline-flex items-center gap-2">
-            <BriefcaseBusiness className="h-[13px] w-[13px] text-[#ff6845]" />
+            <BriefcaseBusiness className="h-[13px] w-[13px] text-[#EA7F4A]" />
 
-            <span className="text-[13px] font-semibold uppercase tracking-[1px] text-[#ff6845]">
+            <span className="text-[13px] font-semibold uppercase tracking-[1px] text-[#EA7F4A]">
               Our Quality Services
             </span>
           </div>
 
           {/* Heading */}
           <h2 className="text-[26px] font-semibold leading-[1.15]  text-white sm:text-[32px] md:text-[40px] lg:text-[48px]">
-            Committed to <span className="text-[#ff6845]">Excellence</span> in
+            Committed to <span className="text-[#EA7F4A]">Excellence</span> in
             <br className="hidden sm:block" /> Revenue Cycle Management
           </h2>
 
@@ -121,8 +121,8 @@ export default function QualityServices() {
 
               return (
                 <div
-                  className={`  border-b-3 border-b-[-3px] border-[#ff6845] ${
-                    isActive ? "border-[#ff6845]" : "border-transparent"
+                  className={`  border-b-3 border-b-[-3px] border-[#EA7F4A] ${
+                    isActive ? "border-[#EA7F4A]" : "border-transparent"
                   }`}
                 >
                   <button
@@ -131,7 +131,7 @@ export default function QualityServices() {
                     onClick={() => setActiveTab(service.id)}
                     className={`flex h-[40px] shrink-0 font-semibold items-center gap-2 rounded-full border px-4 md:px-6 text-[13px] md:text-[15px] font-medium capitalize transition-all duration-200 ${
                       isActive
-                        ? "border-[#ff6845] bg-[#ff6845] text-white"
+                        ? "border-[#EA7F4A] bg-[#EA7F4A] text-white"
                         : "border-white/20 bg-transparent text-white/60 hover:border-white/40 hover:text-white"
                     }`}
                   >
@@ -162,9 +162,9 @@ export default function QualityServices() {
               <div className="flex w-full flex-col justify-center p-6 md:p-10 lg:w-1/2">
                 {/* Badge */}
                 <div className="mb-3 flex items-center gap-2">
-                  <BriefcaseBusiness className="h-[12px] w-[12px] text-[#ff6845]" />
+                  <BriefcaseBusiness className="h-[12px] w-[12px] text-[#EA7F4A]" />
 
-                  <span className="text-[12px] font-bold uppercase tracking-[1px] text-[#ff6845]">
+                  <span className="text-[12px] font-bold uppercase tracking-[1px] text-[#EA7F4A]">
                     {activeService.badge}
                   </span>
                 </div>

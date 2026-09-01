@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { Icon } from "@iconify/react";
-
+import Container from "@components/common/Container";
 const services = [
   "Credentialing & Contracting",
   "Electronic Claims Setup",
@@ -37,6 +37,10 @@ const socials = [
     name: "Twitter",
     icon: "mdi:twitter",
   },
+  {
+    name: "Youtube",
+    icon: "mdi:youtube",
+  },
 ];
 export default function Footer() {
   return (
@@ -49,7 +53,7 @@ export default function Footer() {
 
       <div className="relative z-10 mx-auto w-full max-w-[1440px]">
         {/* Main Footer */}
-        <div className="grid grid-cols-1 px-[35px] pb-10 pt-[45px] sm:px-[35px] sm:pb-12 sm:pt-[50px] md:grid-cols-2 md:gap-x-16 md:gap-y-12 md:px-[35px] md:pt-[55px] lg:grid-cols-[1.45fr_1.15fr_1.15fr_1fr] lg:gap-x-10 lg:px-[32px] lg:pb-[70px] lg:pt-[75px] xl:px-[32px]">
+        <Container className="grid grid-cols-1   md:grid-cols-2 md:gap-x-16 md:gap-y-12  lg:grid-cols-[1.45fr_1.15fr_1.15fr_1fr] lg:gap-x-10 py-16  md:py-20 ">
           {/* Brand */}
           <div>
             <div className="flex items-center">
@@ -62,7 +66,7 @@ export default function Footer() {
               />
             </div>
 
-            <p className="mt-5 max-w-[360px] text-[13px] leading-[1.95] text-[#8eaeab] sm:text-[14px] lg:mt-6 lg:text-[14px]">
+            <p className="mt-5 max-w-[360px] text-[14px] leading-[1.95] text-[#8eaeab] lg:mt-6 ">
               Your trusted partner in smarter healthcare billing. Delivering
               accuracy, speed, and peace of mind — every claim, every time.
             </p>
@@ -74,7 +78,7 @@ export default function Footer() {
                   key={social.name}
                   href={social.href}
                   aria-label={social.name}
-                  className="flex h-[36px] w-[36px] items-center justify-center rounded-[8px] border border-[#477b76] bg-[#28635f]/60 transition-colors hover:border-[#ff7048]"
+                  className="flex h-[36px] w-[36px] items-center justify-center rounded-[8px] border border-[#477b76] bg-[#28635f]/60 transition-colors hover:border-[#EA7F4A]"
                 >
                   {/* <Image
                     src={social.icon}
@@ -83,7 +87,12 @@ export default function Footer() {
                     height={16}
                     className="h-[16px] w-[16px] object-contain"
                   /> */}
-                  <Icon icon={social.icon} width={16} height={16} />
+                  <Icon
+                    icon={social.icon}
+                    width={16}
+                    height={16}
+                    className="text-white/70"
+                  />
                 </a>
               ))}
             </div>
@@ -91,10 +100,10 @@ export default function Footer() {
 
           {/* Services */}
           <div className="mt-9 md:mt-0">
-            <h3 className="text-[15px] font-bold tracking-[0.7px] text-white sm:text-[16px]">
+            <h3 className="text-[15px] font-bold tracking-[0.7px] text-white ">
               OUR SERVICES
             </h3>
-            <div className="mt-3 h-[2px] w-[28px] bg-[#ff7048]" />
+            <div className="mt-3 h-[2px] w-[28px] bg-[#EA7F4A]" />
 
             <ul className="mt-5 space-y-[12px] sm:mt-6 sm:space-y-[13px]">
               {services.map((service) => (
@@ -115,7 +124,7 @@ export default function Footer() {
             <h3 className="text-[15px] font-bold tracking-[0.7px] text-white sm:text-[16px]">
               QUICK LINKS
             </h3>
-            <div className="mt-3 h-[2px] w-[28px] bg-[#ff7048]" />
+            <div className="mt-3 h-[2px] w-[28px] bg-[#EA7F4A]" />
 
             <ul className="mt-5 space-y-[12px] sm:mt-6 sm:space-y-[13px]">
               {quickLinks.map((link) => (
@@ -136,20 +145,20 @@ export default function Footer() {
             <h3 className="text-[15px] font-bold tracking-[0.7px] text-white sm:text-[16px]">
               CONTACT US
             </h3>
-            <div className="mt-3 h-[2px] w-[28px] bg-[#ff7048]" />
+            <div className="mt-3 h-[2px] w-[28px] bg-[#EA7F4A]" />
 
             <div className="mt-6 space-y-5">
               {/* Phone */}
               <div className="flex items-start gap-3">
-                <div className="flex h-[33px] w-[33px] shrink-0 items-center justify-center rounded-[8px] border border-[#557c77] bg-[#28635f] text-[#ff7048]">
+                <div className="flex h-[33px] w-[33px] shrink-0 items-center justify-center rounded-[8px] border border-[#557c77] bg-[#28635f] text-[#EA7F4A]">
                   <Phone className="h-[14px] w-[14px]" strokeWidth={2} />
                 </div>
 
                 <div>
-                  <p className="text-[10px] font-semibold tracking-[0.6px] text-[#6f9693]">
+                  <p className="text-[11px] font-semibold tracking-[0.6px] text-[#6f9693]">
                     PHONE
                   </p>
-                  <p className="mt-1 text-[12px] leading-[1.7] text-[#a5c0bd] sm:text-[13px]">
+                  <p className="mt-1 text-[13px] leading-[1.7] text-[#a5c0bd] ">
                     (727) 591-0997
                     <br />
                     (888) 987-0332
@@ -159,7 +168,7 @@ export default function Footer() {
 
               {/* Email */}
               <div className="flex items-start gap-3">
-                <div className="flex h-[33px] w-[33px] shrink-0 items-center justify-center rounded-[8px] border border-[#557c77] bg-[#28635f] text-[#ff7048]">
+                <div className="flex h-[33px] w-[33px] shrink-0 items-center justify-center rounded-[8px] border border-[#557c77] bg-[#28635f] text-[#EA7F4A]">
                   <Mail className="h-[14px] w-[14px]" strokeWidth={2} />
                 </div>
 
@@ -178,7 +187,7 @@ export default function Footer() {
 
               {/* Address */}
               <div className="flex items-start gap-3">
-                <div className="flex h-[33px] w-[33px] shrink-0 items-center justify-center rounded-[8px] border border-[#557c77] bg-[#28635f] text-[#ff7048]">
+                <div className="flex h-[33px] w-[33px] shrink-0 items-center justify-center rounded-[8px] border border-[#557c77] bg-[#28635f] text-[#EA7F4A]">
                   <MapPin className="h-[14px] w-[14px]" strokeWidth={2} />
                 </div>
 
@@ -195,25 +204,25 @@ export default function Footer() {
               </div>
             </div>
           </div>
-        </div>
+        </Container>
 
         {/* Bottom Bar */}
-        <div className="border-t border-[#39716d]/60 px-[35px] py-5 sm:px-[35px] md:flex md:items-center md:justify-between md:py-5 lg:px-[32px]">
-          <p className="text-center text-[10px] text-[#709693] sm:text-[11px] md:text-left lg:text-[12px]">
+        <div className="border-t border-[#39716d]/60 px-[16px] py-5 sm:px-[35px] md:flex md:items-center md:justify-between md:py-5 lg:px-[32px]">
+          <p className="text-center text-[13px] text-[#709693]  md:text-left ">
             © 2026 Lucentra RCM Solutions LLC. All rights reserved.
           </p>
 
           <div className="mt-4 flex items-center justify-center gap-6 md:mt-0">
             <a
               href="#"
-              className="text-[10px] text-[#709693] transition-colors hover:text-white sm:text-[11px] lg:text-[12px]"
+              className="text-[13px] text-[#709693] transition-colors hover:text-white "
             >
               Terms of Use
             </a>
 
             <a
               href="#"
-              className="text-[10px] text-[#709693] transition-colors hover:text-white sm:text-[11px] lg:text-[12px]"
+              className="text-[13px] text-[#709693] transition-colors hover:text-white "
             >
               Privacy Policy
             </a>
