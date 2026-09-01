@@ -1,10 +1,14 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { BriefcaseBusiness, ChevronLeft, ChevronRight } from "lucide-react";
-import Container from "./common/Container";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-export default function Testimonials() {
+import { BriefcaseBusiness, ChevronLeft, ChevronRight } from "lucide-react";
+import Slider from "react-slick";
+import Container from "./common/Container";
+import SectionHeading from "./common/SectionHeading";
+
+export default function Testimonial() {
   const testimonials = [
     {
       text: "Lucentra RCM Solutions made the credentialing process incredibly smooth. I was onboarded with major payers faster than I expected. Their team is efficient and always available for support.",
@@ -38,117 +42,62 @@ export default function Testimonials() {
     },
   ];
 
-  /*
-   * Clone enough cards at the beginning and end so
-   * the slider can move continuously.
-   */
-  const visibleCards = 3;
+  /* ================= SLIDER SETTINGS ================= */
 
-  const extendedTestimonials = [
-    ...testimonials.slice(-visibleCards),
-    ...testimonials,
-    ...testimonials.slice(0, visibleCards),
-  ];
+  const sliderSettings = {
+    infinite: true,
 
-  const [currentIndex, setCurrentIndex] = useState(visibleCards);
-  const [isTransitioning, setIsTransitioning] = useState(true);
-  const [cardsPerView, setCardsPerView] = useState(3);
+    // 2 seconds movement
+    speed: 2000,
 
-  /* ================= RESPONSIVE CARD COUNT ================= */
+    // 1.5 seconds pause after movement
+    autoplaySpeed: 1500,
 
-  useEffect(() => {
-    const updateCardsPerView = () => {
-      if (window.innerWidth < 768) {
-        setCardsPerView(1);
-      } else if (window.innerWidth < 1024) {
-        setCardsPerView(2);
-      } else {
-        setCardsPerView(3);
-      }
-    };
+    autoplay: true,
 
-    updateCardsPerView();
+    // Linear movement
+    cssEase: "linear",
 
-    window.addEventListener("resize", updateCardsPerView);
+    slidesToShow: 3,
+    slidesToScroll: 1,
 
-    return () => {
-      window.removeEventListener("resize", updateCardsPerView);
-    };
-  }, []);
+    arrows: false,
 
-  /*
-   * Reset to the real cards after reaching a clone.
-   */
-  useEffect(() => {
-    if (!isTransitioning) return;
+    pauseOnHover: true,
 
-    if (currentIndex >= testimonials.length + visibleCards) {
-      const timer = setTimeout(() => {
-        setIsTransitioning(false);
-        setCurrentIndex(visibleCards);
-      }, 700);
-
-      return () => clearTimeout(timer);
-    }
-
-    if (currentIndex < visibleCards) {
-      const timer = setTimeout(() => {
-        setIsTransitioning(false);
-        setCurrentIndex(testimonials.length + visibleCards - 1);
-      }, 700);
-
-      return () => clearTimeout(timer);
-    }
-  }, [currentIndex, isTransitioning, testimonials.length]);
-
-  /*
-   * Re-enable transition after instant reset.
-   */
-  useEffect(() => {
-    if (!isTransitioning) {
-      const timer = setTimeout(() => {
-        setIsTransitioning(true);
-      }, 50);
-
-      return () => clearTimeout(timer);
-    }
-  }, [isTransitioning]);
-
-  /*
-   * Automatic movement.
-   *
-   * 1 second pause
-   * +
-   * 700ms smooth movement
-   */
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setCurrentIndex((prev) => prev + 1);
-    }, 1700);
-
-    return () => clearTimeout(timer);
-  }, [currentIndex]);
-
-  /* ================= MANUAL CONTROLS ================= */
-
-  const nextSlide = () => {
-    setCurrentIndex((prev) => prev + 1);
-  };
-
-  const previousSlide = () => {
-    setCurrentIndex((prev) => prev - 1);
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   return (
     <section
-      className="w-full overflow-hidden bg-[#f2f8f7]  bg-fit  bg-top-left bg-no-repeat  py-16 sm:py-20 lg:py-24"
+      className="w-full overflow-hidden bg-[#f2f8f7] bg-fit bg-top-left bg-no-repeat py-16 sm:py-20 lg:py-24"
       style={{ backgroundImage: "url('/mapdots.png')" }}
     >
       <Container className="px-5 sm:px-8 lg:px-10">
         {/* ================= HEADER ================= */}
 
-        <div className="mx-auto flex max-w-[760px] flex-col items-center text-center">
-          {/* Badge */}
+        <SectionHeading
+          // icon={BriefcaseBusiness}
+          badge="Client Testimonials"
+          title="What Our"
+          highlight="Clients Say"
+          description="Trusted by 500+ healthcare providers nationwide — here's what they experience working with Lucentra RCM Solutions."
+        />
+
+        {/* <div className="mx-auto flex max-w-[760px] flex-col items-center text-center">
           <div className="mb-3 inline-flex items-center gap-2">
             <BriefcaseBusiness className="h-[14px] w-[14px] text-[#EA7F4A]" />
 
@@ -157,90 +106,70 @@ export default function Testimonials() {
             </span>
           </div>
 
-          {/* Heading */}
-          <h2 className="text-[26px] font-semibold leading-[1.15] tracking-[-1px] text-[#102b2a] sm:text-[32px] md:text-[40px] ">
+          <h2 className="text-[26px] font-semibold leading-[1.15] tracking-[-1px] text-[#102b2a] sm:text-[32px] md:text-[40px]">
             What Our <span className="text-[#075f5b]">Clients Say</span>
           </h2>
 
-          {/* Description */}
           <p className="mt-4 max-w-[680px] text-[14px] leading-[1.8] text-[#7b8585] sm:text-[16px]">
             Trusted by 500+ healthcare providers nationwide — here&apos;s what
             they experience working with Lucentra RCM Solutions.
           </p>
-        </div>
+        </div> */}
 
         {/* ================= SLIDER ================= */}
 
         <div className="relative mt-12">
-          {/* Viewport */}
-          <div className="overflow-hidden">
-            {/* Track */}
-            <div
-              className={`flex ${
-                isTransitioning
-                  ? "transition-transform duration-700 ease-in-out"
-                  : ""
-              }`}
-              style={{
-                transform: `translateX(-${
-                  (currentIndex * 100) / cardsPerView
-                }%)`,
-              }}
-            >
-              {extendedTestimonials.map((testimonial, index) => (
-                <div
-                  key={`${testimonial.name}-${index}`}
-                  className="w-full shrink-0 px-2 md:w-1/2 lg:w-1/3"
-                >
-                  <div className="relative flex  flex-col rounded-[14px] bg-white p-6 shadow-[0_8px_25px_rgba(7,95,91,0.06)]">
-                    {/* Dashed top + right border */}
-                    <div className="pointer-events-none absolute right-0 top-0 h-full w-[72%] rounded-tr-[14px] border-r-4 border-t-4 border-dashed border-[#10b9b5]" />
+          <Slider {...sliderSettings}>
+            {testimonials.map((testimonial) => (
+              <div key={testimonial.name} className="px-2">
+                <div className="relative flex flex-col rounded-[14px] bg-white p-6 shadow-[0_8px_25px_rgba(7,95,91,0.06)]">
+                  {/* Dashed top + right border */}
+                  <div className="pointer-events-none absolute right-0 top-0 h-full w-[72%] rounded-tr-[14px] border-r-4 border-t-4 border-dashed border-[#10b9b5]" />
 
-                    {/* Stars */}
-                    <div className="flex gap-1 text-[18px] leading-none text-[#ef7548]">
-                      ★★★★★
-                    </div>
+                  {/* Stars */}
+                  <div className="flex gap-1 text-[18px] leading-none text-[#ef7548]">
+                    ★★★★★
+                  </div>
 
-                    {/* Testimonial */}
-                    <p className="mt-6 text-[13px] leading-[1.8] text-[#777f80] sm:text-[14px]">
-                      &quot;{testimonial.text}&quot;
-                    </p>
+                  {/* Testimonial */}
+                  <p className="mt-6 text-[13px] leading-[1.8] text-[#777f80] sm:text-[14px]">
+                    &quot;{testimonial.text}&quot;
+                  </p>
 
-                    {/* Divider */}
-                    <div className=" pt-6">
-                      <div className="h-px w-full bg-[#e5ebea]" />
+                  {/* Divider */}
+                  <div className="pt-6">
+                    <div className="h-px w-full bg-[#e5ebea]" />
 
-                      {/* User */}
-                      <div className="mt-5 flex items-center gap-3">
-                        {/* Avatar */}
-                        <div className="flex h-[50px] w-[50px] shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#075f5b] to-[#ef7548] text-[17px] font-semibold text-white">
-                          {testimonial.initial}
-                        </div>
+                    {/* User */}
+                    <div className="mt-5 flex items-center gap-3">
+                      {/* Avatar */}
+                      <div className="flex h-[50px] w-[50px] shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#075f5b] to-[#ef7548] text-[17px] font-semibold text-white">
+                        {testimonial.initial}
+                      </div>
 
-                        {/* Details */}
-                        <div className="min-w-0">
-                          <p className="text-[14px] font-semibold text-[#172b2b]">
-                            {testimonial.name}
-                          </p>
+                      {/* Details */}
+                      <div className="min-w-0">
+                        <p className="text-[14px] font-semibold text-[#172b2b]">
+                          {testimonial.name}
+                        </p>
 
-                          <p className="mt-1 text-[11px] text-[#7d8585]">
-                            {testimonial.role}
-                          </p>
-                        </div>
+                        <p className="mt-1 text-[11px] text-[#7d8585]">
+                          {testimonial.role}
+                        </p>
                       </div>
                     </div>
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
+              </div>
+            ))}
+          </Slider>
 
           {/* ================= CONTROLS ================= */}
 
           <div className="mt-7 flex items-center justify-center gap-8">
             <button
               type="button"
-              onClick={previousSlide}
+              onClick={() => sliderRef?.current?.slickPrev()}
               className="flex h-8 w-8 items-center justify-center text-[#172b2b] transition hover:text-[#EA7F4A]"
               aria-label="Previous testimonial"
             >
@@ -249,7 +178,7 @@ export default function Testimonials() {
 
             <button
               type="button"
-              onClick={nextSlide}
+              onClick={() => sliderRef?.current?.slickNext()}
               className="flex h-8 w-8 items-center justify-center text-[#172b2b] transition hover:text-[#EA7F4A]"
               aria-label="Next testimonial"
             >

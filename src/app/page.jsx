@@ -6,9 +6,7 @@ import WhoWeAreSection from "@components/WhoWeAreSection";
 import QualityServices from "@components/QualityServices";
 import PracticeGrowth from "@components/PracticeGrowth";
 import ContactSection from "@components/ContactUs";
-import Testimonials from "@components/Testimonial";
-
-import Footer from "@/app/components/Footer/Footer";
+import Testimonial from "@components/Testimonial";
 
 function HomePage() {
   return (
@@ -19,7 +17,8 @@ function HomePage() {
       <QualityServices />
       <PracticeGrowth />
       <ContactSection />
-      <Testimonials />
+
+      <Testimonial />
     </main>
   );
 }

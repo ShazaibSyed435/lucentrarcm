@@ -5,7 +5,7 @@ import {
   UserRoundCheck,
 } from "lucide-react";
 import Container from "./common/Container";
-import SectionHeading from "./common/SectionHeading";
+// import SectionHeading from "./common/SectionHeading";
 
 export default function PracticeGrowth() {
   const cards = [
