@@ -1,6 +1,7 @@
 import Container from "./common/Container";
 import { BriefcaseBusiness, Phone, Mail, Clock3 } from "lucide-react";
 import Image from "next/image";
+import SectionHeading from "@components/common/SectionHeading";
 
 export default function ContactSection() {
   const contactInfo = [
@@ -34,27 +35,43 @@ export default function ContactSection() {
 
             {/* Content */}
             <div className="relative z-10">
+              <SectionHeading
+                badge="Contact Us"
+                align="left"
+                className="mx-0"
+                maxWidth="max-w-[600px]"
+                titleColor="text-white"
+                highlightColor="text-[#EA7F4A]"
+                descriptionColor="text-white/60"
+                descriptionMaxWidth="max-w-[600px]"
+                titleClassName="text-[26px] font-semibold leading-[1.15]  sm:text-[32px] md:text-[36px] "
+                description="Our billing experts are ready to help you maximize revenue, reduce claim denials, and simplify your entire billing operation. We'll be in touch within 24 hours."
+              >
+                Ready to Grow{" "}
+                <span className="text-[#EA7F4A]">Your Practice?</span>
+              </SectionHeading>
+
               {/* Badge */}
-              <div className="mb-4 inline-flex items-center gap-2">
+              {/* <div className="mb-4 inline-flex items-center gap-2">
                 <BriefcaseBusiness className="h-[13px] w-[13px] text-[#EA7F4A]" />
 
                 <span className="text-[13px] font-bold uppercase tracking-[1px] text-[#EA7F4A]">
                   Contact Us
                 </span>
-              </div>
+              </div> */}
 
               {/* Heading */}
-              <h2 className=" mb-4 md:mb-8 max-w-[600px] text-[26px] font-semibold leading-[1.15] tracking-[-0.8px] text-white sm:text-[32px] md:text-[36px]">
+              {/* <h2 className=" mb-4 md:mb-8 max-w-[600px] text-[26px] font-semibold leading-[1.15] tracking-[-0.8px] text-white sm:text-[32px] md:text-[36px]">
                 Ready to Grow{" "}
                 <span className="text-[#EA7F4A]">Your Practice?</span>
-              </h2>
+              </h2> */}
 
               {/* Description */}
-              <p className=" max-w-[600px] text-[14px] leading-[1.8] text-white/60 sm:text-[15px]">
+              {/* <p className=" max-w-[600px] text-[14px] leading-[1.8] text-white/60 sm:text-[15px]">
                 Our billing experts are ready to help you maximize revenue,
                 reduce claim denials, and simplify your entire billing
                 operation. We&apos;ll be in touch within 24 hours.
-              </p>
+              </p> */}
 
               {/* Contact Info */}
               <div className="mt-8 flex flex-col gap-3">

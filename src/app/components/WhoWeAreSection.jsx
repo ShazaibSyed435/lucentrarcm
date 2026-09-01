@@ -6,6 +6,7 @@ import {
   CircleCheck,
   ArrowRight,
 } from "lucide-react";
+import SectionHeading from "@components/common/SectionHeading";
 
 function WhoWeAreSection() {
   const stats = [
@@ -95,72 +96,61 @@ function WhoWeAreSection() {
 
           {/* ================= RIGHT SIDE ================= */}
           <div className="w-full lg:w-1/2">
-            <div className="flex flex-col">
-              {/* Badge */}
-              <div className="mb-3 inline-flex items-center gap-2">
-                <BriefcaseBusiness className="h-[14px] w-[14px] text-[#EA7F4A]" />
+            {/* <SectionHeading
+              icon={BriefcaseBusiness}
+              badge="Who We Are"
+              title="Your Trusted Partner in"
+              highlight="Medical Billing Success"
+              description="We have empowered 500+ healthcare providers nationwide to optimize their revenue and streamline billing processes. At Lucentra RCM Solutions, our dedicated team of billing experts focuses on maximizing your practice's financial health while simplifying your administrative workload."
+              align="left"
+            /> */}
 
-                <span className="text-[13px] font-bold uppercase tracking-[1px] text-[#EA7F4A]">
-                  Who We Are
-                </span>
-              </div>
+            <SectionHeading
+              badge="Who We Are"
+              description="We have empowered 500+ healthcare providers nationwide to optimize their revenue and streamline billing processes. At Lucentra RCM Solutions, our dedicated team of billing experts focuses on maximizing your practice's financial health while simplifying your administrative workload."
+              align="left"
+            >
+              Your Trusted Partner in{" "}
+              <span className="text-[#075f5b]">Medical Billing</span> Success
+            </SectionHeading>
 
-              {/* Heading */}
-              <h2 className="max-w-[700px] text-[26px] font-bold leading-[1.25] tracking-[-1px] text-[#171717] sm:text-[30px] md:text-[34px] lg:text-[38px] xl:text-[42px]">
-                Your Trusted Partner in{" "}
-                <span className="text-[#075f5b]">Medical Billing </span>Success
-              </h2>
+            {/* Features */}
+            <div className="mt-8 flex flex-col gap-4">
+              {features.map((feature) => {
+                const Icon = feature.icon;
 
-              {/* Description */}
-              <p className="mt-5 max-w-[700px] text-[14px] font-normal leading-[1.7] text-[#7a7a7a]  md:text-[16px]">
-                We have empowered 500+ healthcare providers nationwide to
-                optimize their revenue and streamline billing processes. At
-                Lucentra RCM Solutions, our dedicated team of billing experts
-                focuses on maximizing your practice&apos;s financial health
-                while simplifying your administrative workload.
-              </p>
-
-              {/* Features */}
-              <div className="mt-8 flex flex-col gap-4">
-                {features.map((feature) => {
-                  const Icon = feature.icon;
-
-                  return (
-                    <div
-                      key={feature.title}
-                      className="flex gap-4 rounded-[14px] border border-[#d8e9e7] bg-[#f5fbfa] p-4 md:p-5"
-                    >
-                      {/* Icon */}
-                      <div className="flex h-[46px] w-[46px] shrink-0 items-center justify-center rounded-[10px] bg-[#075f5b]">
-                        <Icon className="h-[22px] w-[22px] text-white" />
-                      </div>
-
-                      {/* Content */}
-                      <div>
-                        <h3 className="text-[15px] font-semibold leading-[1.3] text-[#171717] md:text-[17px]">
-                          {feature.title}
-                        </h3>
-
-                        <p className="mt-1 text-[13px] leading-[1.7] text-[#777777] sm:text-[14px]">
-                          {feature.description}
-                        </p>
-                      </div>
+                return (
+                  <div
+                    key={feature.title}
+                    className="flex gap-4 rounded-[14px] border border-[#d8e9e7] bg-[#f5fbfa] p-4 md:p-5"
+                  >
+                    <div className="flex h-[46px] w-[46px] shrink-0 items-center justify-center rounded-[10px] bg-[#075f5b]">
+                      <Icon className="h-[22px] w-[22px] text-white" />
                     </div>
-                  );
-                })}
-              </div>
 
-              {/* Buttons */}
-              <div className="mt-8 flex flex-wrap gap-4">
-                <button className="inline-flex h-[48px] items-center justify-center gap-2 rounded-full bg-[#075f5b] px-8 text-[14px] font-semibold text-white transition hover:bg-[#064d49]">
-                  Learn More About Us
-                  {/* <ArrowRight className="h-4 w-4" /> */}
-                </button>
+                    <div>
+                      <h3 className="text-[15px] font-semibold leading-[1.3] text-[#171717] md:text-[17px]">
+                        {feature.title}
+                      </h3>
 
-                <button className="inline-flex h-[48px] items-center justify-center gap-2 rounded-full bg-[#075f5b] px-8 text-[14px] font-semibold text-white transition hover:bg-[#064d49]">
-                  Get In Touch
-                </button>
-              </div>
+                      <p className="mt-1 text-[13px] leading-[1.7] text-[#777777] sm:text-[14px]">
+                        {feature.description}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Buttons */}
+            <div className="mt-8 flex flex-wrap gap-4">
+              <button className="inline-flex h-[48px] items-center justify-center gap-2 rounded-full bg-[#075f5b] px-8 text-[14px] font-semibold text-white transition hover:bg-[#064d49]">
+                Learn More About Us
+              </button>
+
+              <button className="inline-flex h-[48px] items-center justify-center gap-2 rounded-full bg-[#075f5b] px-8 text-[14px] font-semibold text-white transition hover:bg-[#064d49]">
+                Get In Touch
+              </button>
             </div>
           </div>
         </div>

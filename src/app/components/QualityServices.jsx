@@ -10,6 +10,7 @@ import {
   Check,
 } from "lucide-react";
 import Image from "next/image";
+import SectionHeading from "./common/SectionHeading";
 
 export default function QualityServices() {
   const [activeTab, setActiveTab] = useState("providers");
@@ -88,29 +89,17 @@ export default function QualityServices() {
     <section className="w-full overflow-hidden bg-[#012524] py-16 sm:py-20 lg:py-24">
       <Container className="px-5 sm:px-8 lg:px-10">
         {/* ================= HEADER ================= */}
-        <div className="mx-auto flex max-w-[700px] flex-col items-center text-center">
-          {/* Badge */}
-          <div className="mb-3 inline-flex items-center gap-2">
-            <BriefcaseBusiness className="h-[13px] w-[13px] text-[#EA7F4A]" />
+       
 
-            <span className="text-[13px] font-semibold uppercase tracking-[1px] text-[#EA7F4A]">
-              Our Quality Services
-            </span>
-          </div>
-
-          {/* Heading */}
-          <h2 className="text-[26px] font-semibold leading-[1.15]  text-white sm:text-[32px] md:text-[40px] lg:text-[48px]">
-            Committed to <span className="text-[#EA7F4A]">Excellence</span> in
-            <br className="hidden sm:block" /> Revenue Cycle Management
-          </h2>
-
-          {/* Description */}
-          <p className="mt-4 max-w-[650px] text-[14px] leading-[1.8] text-white/60 sm:text-[16px]">
-            We treat your practice like a trusted partner—delivering accurate,
-            timely, and compliant billing solutions tailored to your specialty,
-            workflow, and financial goals.
-          </p>
-        </div>
+        <SectionHeading
+          badge="Our Quality Services"
+          description="We treat your practice like a trusted partner—delivering accurate, timely, and compliant billing solutions tailored to your specialty, workflow, and financial goals."
+          titleColor="text-white"
+          descriptionColor="text-white/60"
+        >
+          Committed to <span className="text-[#EA7F4A]">Excellence</span> in
+          <br className="hidden sm:block" /> Revenue Cycle Management
+        </SectionHeading>
 
         {/* ================= TABS ================= */}
         <div className="mt-10 md:mt-14 overflow-x-auto pb-2 scrollbar-hide">

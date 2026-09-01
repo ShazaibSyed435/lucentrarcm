@@ -8,6 +8,7 @@ import {
   WalletCards,
   BadgeCheck,
 } from "lucide-react";
+import { Icon } from "@iconify/react";
 
 const services = [
   {
@@ -63,8 +64,13 @@ export default function SpecializedServices() {
           <div className="w-full xl:max-w-[700px]">
             {/* Badge */}
             <div className="mb-2 inline-flex items-center gap-1.5">
-              <BriefcaseBusiness className="h-[13px] w-[13px] text-[#ff6845]" />
-              <span className=" px-1 text-[12px] font-semibold leading-[16px] text-[#075f5b]">
+              {/* <BriefcaseBusiness className="h-[13px] w-[13px] text-[#ff6845]" /> */}
+              <Icon
+                icon="fa-solid:notes-medical"
+                className={`h-[13px] w-[13px] text-[#ff6845]`}
+              />
+
+              <span className=" px-1 text-[12px] font-bold leading-[16px] text-[#075f5b]">
                 Our Specialized Services
               </span>
             </div>

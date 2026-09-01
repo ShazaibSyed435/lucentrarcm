@@ -48,10 +48,10 @@ export default function Testimonial() {
     infinite: true,
 
     // 2 seconds movement
-    speed: 2000,
+    speed: 2500,
 
     // 1.5 seconds pause after movement
-    autoplaySpeed: 1500,
+    autoplaySpeed: 2000,
 
     autoplay: true,
 
