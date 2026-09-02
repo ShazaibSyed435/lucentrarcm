@@ -1,8 +1,8 @@
-import Container from "./common/Container";
+import Container from "../common/Container";
 import { BriefcaseBusiness, Phone, Mail, Clock3 } from "lucide-react";
 import Image from "next/image";
 import SectionHeading from "@components/common/SectionHeading";
-import ContactForm from "@components/contact/ContactForm";
+import ContactForm from "@/app/components/common/ContactForm";
 
 export default function ContactSection() {
   const contactInfo = [

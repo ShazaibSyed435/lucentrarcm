@@ -5,8 +5,8 @@ import "slick-carousel/slick/slick-theme.css";
 
 import { BriefcaseBusiness, ChevronLeft, ChevronRight } from "lucide-react";
 import Slider from "react-slick";
-import Container from "./common/Container";
-import SectionHeading from "./common/SectionHeading";
+import Container from "../common/Container";
+import SectionHeading from "../common/SectionHeading";
 
 export default function Testimonial() {
   const testimonials = [
@@ -97,24 +97,7 @@ export default function Testimonial() {
           description="Trusted by 500+ healthcare providers nationwide — here's what they experience working with Lucentra RCM Solutions."
         />
 
-        {/* <div className="mx-auto flex max-w-[760px] flex-col items-center text-center">
-          <div className="mb-3 inline-flex items-center gap-2">
-            <BriefcaseBusiness className="h-[14px] w-[14px] text-[#EA7F4A]" />
-
-            <span className="text-[13px] font-bold uppercase tracking-[1px] text-[#EA7F4A]">
-              Client Testimonials
-            </span>
-          </div>
-
-          <h2 className="text-[26px] font-semibold leading-[1.15] tracking-[-1px] text-[#102b2a] sm:text-[32px] md:text-[40px]">
-            What Our <span className="text-[#075f5b]">Clients Say</span>
-          </h2>
-
-          <p className="mt-4 max-w-[680px] text-[14px] leading-[1.8] text-[#7b8585] sm:text-[16px]">
-            Trusted by 500+ healthcare providers nationwide — here&apos;s what
-            they experience working with Lucentra RCM Solutions.
-          </p>
-        </div> */}
+        
 
         {/* ================= SLIDER ================= */}
 

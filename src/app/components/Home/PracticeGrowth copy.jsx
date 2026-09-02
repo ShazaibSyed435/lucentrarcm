@@ -4,8 +4,7 @@ import {
   ChartNoAxesCombined,
   UserRoundCheck,
 } from "lucide-react";
-import Container from "./common/Container";
-import SectionHeading from "@components/common/SectionHeading";
+import Container from "../common/Container";
 
 export default function PracticeGrowth() {
   const cards = [
@@ -42,20 +41,26 @@ export default function PracticeGrowth() {
     <section className="w-full bg-[#f2f8f7] py-16 sm:py-20 lg:py-24">
       <Container className="px-5 sm:px-8 lg:px-10">
         {/* ================= HEADER ================= */}
-
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           {/* Heading */}
-          <SectionHeading
-            badge="Powering Practice Growth"
-            align="left"
-            className="mx-0"
-            maxWidth="max-w-[580px]"
-          >
-            Experience <span className="text-[#075f5b]">Excellence</span>
-            <br className="hidden md:block" /> with a Top-Ranked{" "}
-            <br className="hidden md:block" />
-            Medical Billing Company
-          </SectionHeading>
+          <div className="w-full lg:max-w-[650px]">
+            {/* Badge */}
+            <div className="mb-3 inline-flex items-center gap-2">
+              <BriefcaseBusiness className="h-[13px] w-[13px]  text-[#EA7F4A]" />
+
+              <span className="text-[13px] font-bold uppercase tracking-[1px] text-[#EA7F4A]">
+                Powering Practice Growth
+              </span>
+            </div>
+
+            {/* Heading */}
+            <h2 className="text-[26px] font-bold leading-[1.25] mxa-w-[580px] tracking-[-1px] text-black sm:text-[32px] md:text-[38px] lg:text-[44px] xl:text-[44px]">
+              Experience <span className="text-[#075f5b]">Excellence </span>
+              <br className="hidden md:block" /> with a Top-Ranked{" "}
+              <br className="hidden md:block" />
+              Medical Billing Company
+            </h2>
+          </div>
 
           {/* Description */}
           <div className="w-full lg:max-w-[360px] lg:pb-1">

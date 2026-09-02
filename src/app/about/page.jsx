@@ -1,10 +1,12 @@
 import React from "react";
-import WhoWeAreSection from "@components/WhoWeAreSection";
-import AboutUs from "@components/AboutUs";
+import WhoWeAreSection from "@/app/components/Home/WhoWeAreSection";
+
+import AboutUsHeroSection from "@components/about/AboutHeroSection";
 export default function AboutPage() {
   return (
     <main>
-      <AboutUs />
+      <AboutUsHeroSection />
+
       <WhoWeAreSection />
     </main>
   );

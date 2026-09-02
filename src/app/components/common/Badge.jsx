@@ -11,11 +11,9 @@ export default function Badge({
 
   // Border can be removed
   border = true,
-
   // Icon
   icon = "fa-solid:notes-medical",
   showIcon = true,
-
   className = "",
 }) {
   return (
@@ -36,13 +34,4 @@ export default function Badge({
       <span>{children}</span>
     </div>
   );
-}
-
-{
-  /* <div className=" inline-flex w-fit items-center gap-2 rounded-full border bg-[#EA7F4A]/15 border-[#EA7F4A] px-4 py-2 text-[11px] md:text-[13px] font-medium text-[#EA7F4A]  sm:px-5 sm:text-sm">
-  <span>
-    <Icon icon="fa-solid:notes-medical" className="" />
-  </span>
-  <span>Trusted Healthcare IT Solutions</span>
-</div>; */
 }

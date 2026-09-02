@@ -57,14 +57,13 @@ const services = [
 
 export default function SpecializedServices() {
   return (
-    <section className="w-full bg-white ">
+    <section id="services" className="w-full bg-white ">
       <div className="mx-auto w-full max-w-[1440px] px-4 py-20   md:px-8 md:py-8  xl:py-20 ">
         {/* Heading */}
         <div className="mb-2 flex flex-col gap-5   lg:gap-6  xl:flex-row xl:items-end xl:justify-between xl:gap-12">
           <div className="w-full xl:max-w-[700px]">
             {/* Badge */}
             <div className="mb-2 inline-flex items-center gap-1.5">
-              {/* <BriefcaseBusiness className="h-[13px] w-[13px] text-[#ff6845]" /> */}
               <Icon
                 icon="fa-solid:notes-medical"
                 className={`h-[13px] w-[13px] text-[#ff6845]`}

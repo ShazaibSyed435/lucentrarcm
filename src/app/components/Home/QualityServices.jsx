@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Container from "./common/Container";
+import Container from "../common/Container";
 import {
   BriefcaseBusiness,
   UsersRound,
@@ -10,7 +10,7 @@ import {
   Check,
 } from "lucide-react";
 import Image from "next/image";
-import SectionHeading from "./common/SectionHeading";
+import SectionHeading from "../common/SectionHeading";
 
 export default function QualityServices() {
   const [activeTab, setActiveTab] = useState("providers");
@@ -89,7 +89,6 @@ export default function QualityServices() {
     <section className="w-full overflow-hidden bg-[#012524] py-16 sm:py-20 lg:py-24">
       <Container className="px-5 sm:px-8 lg:px-10">
         {/* ================= HEADER ================= */}
-       
 
         <SectionHeading
           badge="Our Quality Services"

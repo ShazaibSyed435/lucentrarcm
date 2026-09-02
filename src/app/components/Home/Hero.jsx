@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Icon } from "@iconify/react";
 
 import { ChevronRight } from "lucide-react";
-import Badge from "./common/Badge";
+import Badge from "../common/Badge";
 
 function HeroSection() {
   const features = [
@@ -95,9 +95,7 @@ function HeroSection() {
             {/* Content */}
             <div className="relative max-w-[640px] md:ml-auto z-10 flex h-full gap-4 lg:gap-5 xl:gap-6 justify-center flex-col px-6 py-10 md:px-8 md:py-8 lg:px-10 lg:py-12">
               {/* Badge */}
-              <Badge>
-                Trusted Healthcare IT Solutions
-              </Badge>
+              <Badge>Trusted Healthcare IT Solutions</Badge>
 
               {/* Heading */}
               <h1 className="max-w-2xl text-[26px] font-bold leading-[1.18]  sm:text-[30px] md:text-[28px] lg:text-[36px] xl:text-[52px]">

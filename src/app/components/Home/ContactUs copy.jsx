@@ -1,8 +1,8 @@
-import Container from "./common/Container";
+import Container from "../common/Container";
 import { BriefcaseBusiness, Phone, Mail, Clock3 } from "lucide-react";
 import Image from "next/image";
 import SectionHeading from "@components/common/SectionHeading";
-import ContactForm from "@components/contact/ContactForm";
+import ContactForm from "@/app/components/common/ContactForm";
 
 export default function ContactSection() {
   const contactInfo = [
@@ -52,7 +52,6 @@ export default function ContactSection() {
                 <span className="text-[#EA7F4A]">Your Practice?</span>
               </SectionHeading>
 
-            
               {/* Contact Info */}
               <div className="mt-8 flex flex-col gap-3">
                 {contactInfo.map((item) => {
