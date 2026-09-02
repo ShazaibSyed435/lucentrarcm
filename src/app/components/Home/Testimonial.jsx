@@ -97,8 +97,6 @@ export default function Testimonial() {
           description="Trusted by 500+ healthcare providers nationwide — here's what they experience working with Lucentra RCM Solutions."
         />
 
-        
-
         {/* ================= SLIDER ================= */}
 
         <div className="relative mt-12">

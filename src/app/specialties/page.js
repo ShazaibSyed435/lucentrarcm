@@ -1,9 +1,12 @@
 import React from "react";
-import SpecialtiesHeroSection from "@components/specialties-com/SpecialtiesHeroSection";
+import SpecialtiesHeroSection from "@/app/components/specialties/SpecialtiesHeroSection";
+import WhatWeCover from "@components/specialties/WhatWeCover";
+
 function Specialties() {
   return (
     <main>
       <SpecialtiesHeroSection />
+      <WhatWeCover/>
     </main>
   );
 }
