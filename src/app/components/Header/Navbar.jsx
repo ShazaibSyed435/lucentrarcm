@@ -26,7 +26,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 h-[96px] w-full bg-white">
+    <header className=" h-[96px] w-full bg-white">
       <nav className="mx-auto flex h-full w-full max-w-[1440px] items-center justify-between  px-[16px] 2xl:px-0">
         {/* Logo */}
         <Link href="/" aria-label="Lucentra RCM home">
@@ -36,17 +36,17 @@ export default function Navbar() {
             width={220}
             height={42}
             priority
-            className="h-auto w-[180px] sm:w-[200px]"
+            className="h-[42] w-[220px]"
           />
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden items-center gap-1 lg:flex">
+        <div className="hidden items-center gap-0 lg:flex">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className="text-[16px] font-bold text-[#7D8185] transition-colors hover:text-black border-2 border-transparent hover:border-2 hover:border-black rounded  px-3 py-1"
+              className="text-[16px] font-bold text-[#7D8185] transition-colors hover:text-black border-2 border-transparent hover:border-2 active:border-black rounded  px-3 py-1"
             >
               {link.name}
             </Link>
@@ -55,29 +55,29 @@ export default function Navbar() {
 
         {/* Desktop Right Side */}
         <div className="hidden items-center gap-5 xl:flex">
-          <a href="tel:8889870332" className="flex items-center gap-3">
+          <a href="tel:8889870332" className="flex items-center gap-2">
             <Image
               src="/call.png"
               alt="Call"
-              width={36}
-              height={36}
-              className="h-9 w-9 object-contain"
+              width={50}
+              height={50}
+              className="h-[50px] w-[50px] object-contain"
             />
 
             <div className="leading-tight">
-              <p className="text-sm text-gray-500">Call Anytime</p>
-              <p className="text-base font-semibold text-gray-900">
+              <p className="text-[14px] text-gray-500">Call Anytime</p>
+              <p className="text-[24px] leading-[1.6] font-semibold text-gray-900">
                 (888) 987-0332
               </p>
             </div>
           </a>
 
-          <Link
-            href="/signup"
-            className="rounded-lg bg-black px-5 py-3 text-sm font-medium text-white transition hover:bg-gray-800"
+          <button
+            href="/contact"
+            className=" bg-[#005350] rounded-full px-5 py-3 text-4 font-medium text-white transition "
           >
-            Get Started
-          </Link>
+            Contact Us
+          </button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -135,7 +135,7 @@ export default function Navbar() {
                     href={link.href}
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    <span className="text-[16px] font-semibold leading-[1.4] text-[#7b7f83] transition-colors hover:text-black border-2 border-transparent hover:border-2 hover:border-black rounded  px-3 py-1">
+                    <span className="text-[16px] font-semibold leading-[1.4] text-[#7b7f83] transition-colors hover:text-black border-2 border-transparent hover:border-2 active:border-black rounded  px-3 py-1">
                       {link.name}
                     </span>
                   </Link>

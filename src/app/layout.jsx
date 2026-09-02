@@ -1,5 +1,7 @@
 import { Schibsted_Grotesk } from "next/font/google";
 import "./globals.css";
+import Navbar from "@components/Header/Navbar";
+import Footer from "@components/Footer/Footer";
 
 const schibstedGrotesk = Schibsted_Grotesk({
   variable: "--font-schibsted-grotesk",
@@ -18,7 +20,9 @@ export default function RootLayout({ children }) {
       className={`${schibstedGrotesk.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-schibsted">
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
