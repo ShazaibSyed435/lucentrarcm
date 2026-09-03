@@ -144,7 +144,7 @@ function InnerHero({
         {/* Content */}
         <div className="relative z-20 flex h-full items-center justify-center">
           <Container className="flex flex-col items-center justify-center gap-4 text-center">
-            {badge && <Badge>{badge}</Badge>}
+            {badge && <Badge isUppercase={true}>{badge}</Badge>}
 
             <h1 className="text-[36px] font-bold leading-[1.25] tracking-[-1px] text-white sm:text-[30px] md:text-[58px] lg:text-[68px]">
               {heading}

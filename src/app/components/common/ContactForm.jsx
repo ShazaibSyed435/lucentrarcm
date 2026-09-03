@@ -1,5 +1,4 @@
-
-export default function ContactForm() {
+export default function ContactForm({ subText }) {
   return (
     <div className="w-full rounded-[16px] border border-[#e2e9e8] bg-white p-6 md:p-10 overflow-hidden">
       {/* Top border */}
@@ -13,7 +12,7 @@ export default function ContactForm() {
       </h3>
 
       <p className="mt-1 text-[12px] text-[#888f8f] md:text-[14px]">
-        We&apos;ll get back to you within 24 hours.
+        {subText ? subText : "We'll get back to you within 24 hours."}
       </p>
 
       {/* Form */}
@@ -72,9 +71,9 @@ export default function ContactForm() {
         <p className="text-[12px] leading-[1.7] text-[#858b8e]">
           By checking this box, you consent to receive SMS messages from
           Lucentra RCM Solutions LLC regarding billing, credentialing, and
-          related services. Message and data rates may apply. Message
-          frequency varies. Reply STOP to opt out or reply HELP for more
-          information. View our{" "}
+          related services. Message and data rates may apply. Message frequency
+          varies. Reply STOP to opt out or reply HELP for more information. View
+          our{" "}
           <a href="#" className="font-medium text-[#075f5b] underline">
             Terms of Use
           </a>{" "}
@@ -96,4 +95,3 @@ export default function ContactForm() {
     </div>
   );
 }
-

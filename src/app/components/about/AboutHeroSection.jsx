@@ -8,12 +8,10 @@ function AboutUsHeroSection() {
         badge="Lucentra RCM Solutions"
         heading={
           <>
-            Our <span className="text-[#EA7F4A]">Pricing</span>
+            About <span className="text-[#EA7F4A]">Us</span>
           </>
         }
-        description="Transparent, flexible plans designed to fit every practice size  from solo practitioners to large multi-specialty groups.
-
-"
+        description="A dedicated team of medical billing experts committed to maximizing your practice's revenue and simplifying your operations."
         bgImage="/aboutUs-bg.jpg"
         stats={[
           {
